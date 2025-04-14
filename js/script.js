@@ -1,10 +1,8 @@
 let arrayOfImages = [
-    "good-a",
-    "good-b",
-    "good-c",
-    "good-d",
-    "good-e",
-    "good-omega-3",
+    "акумуляторний_обприскувач",
+    "газонокосарка",
+    "електричний_тример",
+    "мотокоса"
   ];
 
 fetch('js/goods.json')
@@ -15,18 +13,16 @@ fetch('js/goods.json')
       goodDiv.classList.add("good");
 
       // Append the good div to the container
-      document.getElementById("p-good").appendChild(goodDiv);
+      document.getElementById("goods").appendChild(goodDiv);
 
       // Populate the good div with content
       goodDiv.innerHTML = `
         
         <div class = "good-container">
-          <p>${good.id}</p>
-          <h3>${good.name}</h3>
-          <img src='img/goods/${arrayOfPhotos[index]}.png' alt="${good.name}" onerror="this.onerror=null;this.src='img/goods/default.png';" />
-          <div> 
-            <p>${"💖".repeat(good.rating) + "🤍".repeat(5 - good.rating)}</p>
-          </div>           
+          
+          <h3 class = "good-name">${good.name}</h3>
+          <img src='img/goods/${arrayOfImages[index]}.png' alt="${good.name}" onerror="this.onerror=null;this.src='img/goods/default.png';" />
+        
         </div>
       `;
     });
