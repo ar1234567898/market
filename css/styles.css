@@ -1,0 +1,17 @@
+body {
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+h1 {
+
+    border-radius: 10px ;
+    color: white;
+    font-size: 50px;
+    background-color: red;
+}
+
