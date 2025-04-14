@@ -1,32 +1,26 @@
 [
     {
         "id": 1, 
-        "name": "",
+        "name": "акумуляторний обприскувач",
         "price": 100,
         "sale-price": 80
     },
     {
         "id": 2, 
-        "name": "",
+        "name": "газонокосарка",
         "price": 200,
         "sale-price": 150
     },
     {
         "id": 3, 
-        "name": "",
+        "name": "електричний тример",
         "price": 300,
         "sale-price": 250
     },
     {
         "id": 4, 
-        "name": "",
+        "name": "мотокоса",
         "price": 400,
         "sale-price": 350
-    },
-    {
-        "id": 5, 
-        "name": "",
-        "price": 500,
-        "sale-price": 450
     }
 ]
