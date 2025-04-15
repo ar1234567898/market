@@ -43,7 +43,7 @@ h1 {
     margin: 10px;
     padding: 10px;   
 
-    width: 300px;
+    width: 315px;
     height: 600px;
     border-radius: 20px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
@@ -61,22 +61,60 @@ h1 {
     font-size: 25px;
 }
 
-.good-price {
-    font-size: 35px;
-    border: 2px solid gray;
-    border-radius: 7px;
-    text-align: center;
-    font-weight: 700;
+.currency-span {
+    font-size: 20px;
+    vertical-align: super;
+    display: inline-block;
 }
 
-.sale-price {
+.price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 7px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.real-price{
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: start;
+    font-weight: 600;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.good-price {
+    padding-right: 15px;
     font-size: 35px;
-     color: white;
-    /* text-decoration: line-through; */
+    text-align: end;
+    font-weight: 600;
+}
+
+.coupon-price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    
+    
     background-color: red;
     border: 2px solid red;
     border-radius: 7px;
-    text-align: center;
+    height: 80px;
+}
+
+.coupon-p {
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.coupon-price {
+    padding-right: 15px;
+    font-size: 40px;
+    color: white;
     font-weight: 700;
 }
 
@@ -97,13 +135,12 @@ h1 {
 .phone-number {
     font-size: 35px;
     font-weight: 700;
+    border-left: 10px solid rgb(253, 48, 48);
 }
 
-.phone-number::before {
-    content: fdf;
-    width: 20px;
-    background-color: red;
+.credits-p {
+    font-size: 15px;
+    color: gray;
 }
-
 
 
