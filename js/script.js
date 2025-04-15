@@ -9,6 +9,10 @@ fetch('js/goods.json')
   .then((response) => response.json()) // Fixed parentheses
   .then((data) => {
     data.forEach((good, index) => { // Fixed arrow function syntax
+      const formattedRealPrice = good.real_price.toLocaleString('fr-FR');
+      const formattedNewPrice = good.new_price.toLocaleString('fr-FR');
+      const formattedCouponPrice = good.coupon_price.toLocaleString('fr-FR');
+      
       let goodDiv = document.createElement("div");
       goodDiv.classList.add("good");
 
@@ -22,8 +26,16 @@ fetch('js/goods.json')
           
           <h3 class = "good-name">${good.name}</h3>
           <img class = "good-img" src='img/goods/${arrayOfImages[index]}.png' alt="${good.name}" onerror="this.onerror=null;this.src='img/goods/default.png';" />
-          <p class = "good-price">${good.price} грн</p>
-          <p class = "sale-price">${good.sale_price} грн</p>
+          <div class = "price-div"> 
+            <p class = "real-price">${formattedRealPrice} <span class = "currency-span">грн</span> </p>
+            <p class = "good-price">${formattedNewPrice} <span class = "currency-span">грн</span></p>
+          </div>
+          
+          <div class = "coupon-price-div">
+            <p class = "coupon-p">Ціна за <br>купоном</p>
+            <p class = "coupon-price">${formattedCouponPrice} <span class = "currency-span">грн</span></p>
+          </div>
+          
         
         </div>
       `;
