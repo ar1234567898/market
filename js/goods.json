@@ -2,25 +2,29 @@
     {
         "id": 1, 
         "name": "Акумуляторний обприскувач",
-        "price": 1698,
-        "sale_price": 1596
+        "real_price": 2190,
+        "new_price": 1698,
+        "coupon_price": 1596
     },
     {
         "id": 2, 
         "name": "Газонокосарка",
-        "price": 3297,
-        "sale_price": 3195
+        "real_price": 4497,
+        "new_price": 3297,
+        "coupon_price": 3195
     },
     {
         "id": 3, 
         "name": "Електричний тример",
-        "price": 3498,
-        "sale_price": 3396
+        "real_price": 4497,
+        "new_price": 3498,
+        "coupon_price": 3396
     },
     {
         "id": 4, 
         "name": "Мотокоса",
-        "price": 4497,
-        "sale_price": 4395
+        "real_price": 5499,
+        "new_price": 4497,
+        "coupon_price": 4395
     }
 ]
