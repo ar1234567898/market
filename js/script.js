@@ -21,7 +21,9 @@ fetch('js/goods.json')
         <div class = "good-container">
           
           <h3 class = "good-name">${good.name}</h3>
-          <img src='img/goods/${arrayOfImages[index]}.png' alt="${good.name}" onerror="this.onerror=null;this.src='img/goods/default.png';" />
+          <img class = "good-img" src='img/goods/${arrayOfImages[index]}.png' alt="${good.name}" onerror="this.onerror=null;this.src='img/goods/default.png';" />
+          <p class = "good-price">${good.price} грн</p>
+          <p class = "sale-price">${good.sale_price} грн</p>
         
         </div>
       `;
