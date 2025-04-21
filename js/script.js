@@ -29,6 +29,10 @@ function add_good(name, id, real_price, new_price, coupon_price, imageName = "de
     <div class="good-container">
       <h3 class="good-name">${name}</h3>
       <img class="good-img" src='img/goods/${imageName}.png' alt="${name}" onerror="this.onerror=null;this.src='img/goods/default.png';" />
+      <div class="payment">
+        <div><img class="payment-img" src="img/other/paw.png" alt="monobank" onerror="this.onerror=null;this.src='img/payment/default.png';" />6</div>
+        <div><img class="payment-img" src="img/other/diagramm.png" alt="privatbank" onerror="this.onerror=null;this.src='img/payment/default.png';" />8</div>
+      </div>
       <div class="price-div"> 
         <p class="real-price">${formattedRealPrice} <span class="currency-span">грн</span></p>
         <p class="good-price">${formattedNewPrice} <span class="currency-span">грн</span></p>
