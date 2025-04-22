@@ -131,7 +131,7 @@ h1 {
 .coupon-price-div:hover {
     background-color: #e0e0e0;
     color: red;
-    transition: 0.3s;
+    transition: 0.5s;
     p {
         color: red;
     }
@@ -175,56 +175,5 @@ h1 {
     color: gray;
 }
 
-/* modal */
 
-.payment-modal {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    width: 400px;
-    max-width: 90%;
-    text-align: center;
-}
-
-.payment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.payment-form input,
-.payment-form select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.modal-buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.modal-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.modal-buttons button[type="submit"] {
-    background-color: #28a745;
-    color: white;
-}
-
-.modal-buttons button#close-modal {
-    background-color: #dc3545;
-    color: white;
-}
 
