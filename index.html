@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>market</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./img/other/paw.png" type="image/x-icon" />
   </head>
   <body>
     <content>
       <h1>Товари, на які діє акція</h1>
+      <button class="edit-button" type="button">
+        <img class="edit-img" src="./img/other/edit.png" alt="" />edit
+      </button>
       <section id="goods"></section>
       <section class="credits">
         <p class="city-name">Житомир</p>
@@ -26,7 +30,29 @@
         </p>
       </section>
     </content>
-
+    <dialog class="modal">
+      <div class="modal-content">
+        <button class="close-button" type="button">
+          <img class="close-img" src="./img/other/close.png" alt="" />
+        </button>
+        <h2>Редагування акційних товарів</h2>
+        <form id="edit-form" action="" method="post">
+          <label for="name">Назва товару:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="new-price">Нова ціна:</label>
+          <input type="number" id="new-price" name="new-price" required />
+          <label for="old-price">Колишня ціна:</label>
+          <input id="old-price" name="old-price"></input>
+          <label for="coupon-price">Ціна за купоном:</label>
+          <input id="coupon-price" name="coupon-price"></input>
+          <label for="paw">Оплата монобанк:</label>
+          <input id="paw" name="paw"></input>
+          <label for="circle">Оплата приватбанк:</label>
+          <input id="circle" name="circle"></input>
+          <button class="submit-button" type="submit">Зберегти</button>
+        </form>
+      </div>
+    </dialog>
   </body>
   <script src="./js/script.js"></script>
 </html>
