@@ -1,3 +1,46 @@
+let editButton = document.querySelector(".edit-button");
+let submitButton = document.querySelector(".submit-button");
+let goodName = document.querySelector("#name");
+let goodNewPrice = document.querySelector("#new-price");
+let goodRealPrice = document.querySelector("#real-price");
+let goodCouponPrice = document.querySelector("#coupon-price");
+let goodPaw = document.querySelector("#paw");
+let goodCircle = document.querySelector("#circle");
+function showModal() {
+  let modal = document.querySelector(".modal");
+  let closeButton = document.querySelector(".close-button");
+
+  modal.style.display = "block";
+
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
+
+submitButton.addEventListener("click", function () {
+  console.log(
+    goodName.value,
+    1,
+    goodNewPrice.value,
+    goodRealPrice.value,
+    goodCouponPrice.value,
+    goodPaw.value,
+    goodCircle.value
+  );
+})
+
+
+
+editButton.addEventListener("click", function () {
+  showModal();
+});
+
 async function getObjectsFromFile(file) {
   try {
     const response = await fetch(file);
@@ -51,12 +94,10 @@ function add_good(
   // Add event listeners to make divs behave like buttons
   goodDiv.querySelector(".price-div").addEventListener("click", () => {
     console.log(`Price div clicked for good ID: ${id}`);
-
   });
 
   goodDiv.querySelector(".coupon-price-div").addEventListener("click", () => {
     console.log(`Coupon price div clicked for good ID: ${id}`);
-
   });
 
   document.getElementById("goods").appendChild(goodDiv);
@@ -76,28 +117,24 @@ async function buildGoods() {
     console.error("Failed to load goods data.");
     return;
   }
-  goods
-    .forEach((good, index) => {
-      add_good(
-        good.name,
-        good.id,
-        good.real_price,
-        good.new_price,
-        good.coupon_price,
-        good.paw,
-        good.circle,
-        arrayOfImages[index]
-      );
-    }).catch((error) => {
+
+  goods.forEach((good, index) => {
+    add_good(
+      good.name,
+      good.id,
+      good.real_price,
+      good.new_price,
+      good.coupon_price,
+      good.paw,
+      good.circle,
+      arrayOfImages[index]
+    );
+  }).catch((error) => {
       console.error("Error fetching goods data:", error);
     });
+}
 
-  };
-
-  buildGoods()
-
-
-
+buildGoods();
 
 function remove_good(id) {
   const goodDiv = document.querySelector(`.good[data-id="${id}"]`);
